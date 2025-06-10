@@ -1,6 +1,6 @@
 from pwn import *
 
-elf = ELF("/challenge/babymem-level-4-0")
+elf = ELF("/challenge/babymem-level-3-1")
 
 p = elf.process()
 
